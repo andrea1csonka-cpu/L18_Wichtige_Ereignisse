@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B1 Deutsch Übungen - Lektion 18</title>
+    <style>
+        /* Alapvető CSS a B1 szintű tanulóoldalhoz */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            color: #0056b3; /* Németország színeihez közelítő kék */
+            text-align: center;
+            border-bottom: 3px solid #ffcc00; /* Sárga vonal */
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 25px;
+            border-left: 5px solid #000000; /* Fekete vonal */
+            padding-left: 10px;
+        }
+
+        .aufgabe {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .antwort-box {
+            width: 98%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+            min-height: 50px;
+        }
+
+        .feedback {
+            margin-top: 10px;
+            font-weight: bold;
+            padding: 8px;
+            border-radius: 4px;
+            display: none; /* Alapértelmezetten elrejtve */
+        }
+
+        .correct {
+            background-color: #d4edda;
+            color: #155724;
+            border-color: #c3e6cb;
+        }
+
+        .incorrect {
+            background-color: #f8d7da;
+            color: #721c24;
+            border-color: #f5c6cb;
+        }
+
+        button {
+            background-color: #0056b3;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #004494;
+        }
+
+        /* Egyszerű grafika: Német zászló színei */
+        .flag-separator {
+            display: flex;
+            height: 5px;
+            margin: 20px 0;
+        }
+        .flag-separator div {
+            flex-grow: 1;
+        }
+        .flag-separator .schwarz { background-color: black; }
+        .flag-separator .rot { background-color: red; }
+        .flag-separator .gold { background-color: #ffcc00; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🇩🇪 B1 Deutsch Übungen: Lektion 18 - Interaktive Aufgaben</h1>
+    
+    <div class="flag-separator">
+        <div class="schwarz"></div>
+        <div class="rot"></div>
+        <div class="gold"></div>
+    </div>
+
+    <h2>Aufgabe 1: Lückentext (Konjunktionen: Als / Weil)</h2>
+    <div class="aufgabe">
+        <p>Ergänzen Sie die Sätze mit **ALS** (wenn eine einmalige Handlung in der Vergangenheit passiert) oder **WEIL** (Grund/Ursache).</p>
+        <ol>
+            <li>Die Stimmung war sehr locker, ______________ die Olympischen Spiele begannen.</li>
+            <li>Die Palästinenser griffen die Athleten an, ______________ sie die Freilassung ihrer Genossen forderten.</li>
+        </ol>
+        <textarea id="antwort1" class="antwort-box" placeholder="Schreiben Sie Ihre Antworten (z.B.: 1. Als, 2. Weil)"></textarea>
+        <button onclick="checkAufgabe(1, 'Als, Weil')">Antwort überprüfen</button>
+        <div id="feedback1" class="feedback"></div>
+    </div>
+
+    <h2>Aufgabe 2: Richtig oder Falsch? (Textverständnis)</h2>
+    <div class="aufgabe">
+        <p>Lesen Sie die Aussage und entscheiden Sie, ob sie **Richtig** oder **Falsch** ist. **Begründen** Sie kurz (im Kopf)!</p>
+        <ol>
+            <li>Die DDR baute die Mauer, weil zu viele Menschen aus West-Berlin nach Ost-Berlin flüchteten.</li>
+            <li>Die DDR-Führung kritisierte das westdeutsche Wirtschaftswunder.</li>
+        </ol>
+        <textarea id="antwort2" class="antwort-box" placeholder="Schreiben Sie Ihre Antworten (z.B.: 1. Falsch, 2. Richtig)"></textarea>
+        <button onclick="checkAufgabe(2, 'Falsch, Richtig')">Antwort überprüfen</button>
+        <div id="feedback2" class="feedback"></div>
+    </div>
+
+    <h2>Aufgabe 3: Wortschatz und Zeitangaben</h2>
+    <div class="aufgabe">
+        <p>Welche Jahreszahlen gehören zu den Ereignissen?</p>
+        <ol>
+            <li>Wann fanden die größten Demonstrationen in der DDR statt? (Herbst ...)</li>
+            <li>Wann wurden die Grenzen geöffnet? (9. November ...)</li>
+            <li>Wann fand die Wiedervereinigung statt? (3. Oktober ...)</li>
+        </ol>
+        <textarea id="antwort3" class="antwort-box" placeholder="Schreiben Sie Ihre Antworten (z.B.: 1. 1989, 2. 1989, 3. 1990)"></textarea>
+        <button onclick="checkAufgabe(3, '1989, 1989, 1990')">Antwort überprüfen</button>
+        <div id="feedback3" class="feedback"></div>
+    </div>
+
+    <h2>Aufgabe 4: Relativsätze (Satzbau)</h2>
+    <div class="aufgabe">
+        <p>Verbinden Sie die zwei Sätze mit einem Relativpronomen (**der, die, das**).</p>
+        <p>Neil Armstrong war der erste Mensch. Er landete auf dem Mond.</p>
+        <textarea id="antwort4" class="antwort-box" placeholder="Schreiben Sie den neuen Satz hier."></textarea>
+        <button onclick="checkAufgabe(4, 'Neil Armstrong war der erste Mensch, der auf dem Mond landete.')">Antwort überprüfen</button>
+        <div id="feedback4" class="feedback"></div>
+    </div>
+    
+</div>
+
+<script>
+    /**
+     * JavaScript Funkció az Ellenőrzéshez
+     */
+    function checkAufgabe(id, correctAnswer) {
+        const textarea = document.getElementById(`antwort${id}`);
+        const feedbackDiv = document.getElementById(`feedback${id}`);
+        const userAnswer = textarea.value.trim().toLowerCase().replace(/\s/g, ''); // Tisztítás: kisbetűsítés, szóközök eltávolítása
+        const correctFormatted = correctAnswer.toLowerCase().replace(/\s/g, '');
+        
+        // Speciális kezelés a 4. feladathoz (relatív mondat)
+        if (id === 4) {
+            // A Relativsatz ellenőrzése
+            if (userAnswer.includes('derau') || userAnswer.includes('derer')) { // Egyszerű ellenőrzés a 'der' és a megfelelő kötés meglétére
+                feedbackDiv.className = 'feedback correct';
+                feedbackDiv.innerText = 'Richtig! Musterlösung: ' + correctAnswer;
+            } else {
+                feedbackDiv.className = 'feedback incorrect';
+                feedbackDiv.innerText = 'Falsch. Achten Sie auf das Relativpronomen "der" und die Kommasetzung! Musterlösung: ' + correctAnswer;
+            }
+
+        } else if (userAnswer === correctFormatted) {
+            feedbackDiv.className = 'feedback correct';
+            feedbackDiv.innerText = 'Richtig! Gut gemacht.';
+        } else {
+            feedbackDiv.className = 'feedback incorrect';
+            feedbackDiv.innerText = 'Falsch. Die korrekte Antwort war: ' + correctAnswer;
+        }
+
+        feedbackDiv.style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
